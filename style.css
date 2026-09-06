@@ -1,1 +1,120 @@
+:root {
+    --cor-principal: #183C63;
+    --cor-secundaria: #4A90E2;
+    --cor-fundo: #F5F7FA;
+    --cor-card: #FFFFFF;
+    --cor-texto: #222222;
+}
+
+/* O asterisco aplica a regra a todos os elementos do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+body {
+    max-width: 100vw;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+/* Botão de troca de tema */
+.btn-tema-escuro {
+    background-color: white;
+    color: var(--cor-principal);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Área dos posts */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+/* Cards dos artigos */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 20px;
+    margin: 0;
+    gap: 16px;
+
+    flex: 1 1 25%;
+
+    background-color: var(--cor-card);
+    border-radius: 8px;
+
+    /* Sombra adicionada conforme a aula */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+article h2 {
+    color: var(--cor-principal);
+    font-size: 22px;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+/* =========================
+   TEMA ESCURO
+   ========================= */
+
+.tema-escuro {
+    --cor-fundo: #121212;
+    --cor-card: #1E1E1E;
+    --cor-texto: #FFFFFF;
+}
+
+.tema-escuro article h2 {
+    color: var(--cor-secundaria);
+}
+
+/* Estilo específico para o botão quando o tema escuro estiver ativo */
+.tema-escuro .btn-tema-escuro {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* Sombra dos artigos no tema escuro */
+.tema-escuro article {
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    article {
+        flex: 1 1 100%;
+    }
+}
 
